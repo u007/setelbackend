@@ -1,0 +1,142 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "confirmed_at": {
+      "type": "datetime"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "paid_at": {
+      "type": "datetime"
+    },
+    "discount_seller": {
+      "type": "decimal"
+    },
+    "discount_platform": {
+      "type": "decimal"
+    },
+    "discount_code": {
+      "type": "string"
+    },
+    "channel_order_id": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "enumeration",
+      "enum": [
+        "dinein",
+        "delivery",
+        "pickup",
+        "grab",
+        "foodpanda"
+      ]
+    },
+    "request_delivery_at": {
+      "type": "datetime"
+    },
+    "shipping_at": {
+      "type": "datetime"
+    },
+    "recipient_name": {
+      "type": "string"
+    },
+    "recipient_address": {
+      "type": "richtext"
+    },
+    "recipient_contact": {
+      "type": "string"
+    },
+    "recipient_postcode": {
+      "type": "string"
+    },
+    "recipient_country": {
+      "model": "country",
+      "via": "order"
+    },
+    "order_at": {
+      "type": "datetime"
+    },
+    "recipient_state": {
+      "type": "string"
+    },
+    "recipient_city": {
+      "type": "string"
+    },
+    "shipping_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "shipped",
+        "delivered",
+        "failed",
+        "to_return",
+        "returned",
+        "cancel"
+      ]
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "created",
+        "confirmed",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "created",
+      "required": true
+    },
+    "channel_updated_at": {
+      "type": "datetime"
+    },
+    "shipping_method": {
+      "model": "shipping-method",
+      "via": "orders"
+    },
+    "shipping_fee": {
+      "type": "decimal"
+    },
+    "sales_total": {
+      "type": "decimal"
+    },
+    "paid_total": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "order_id": {
+      "type": "string",
+      "unique": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "attribute.order-item"
+    },
+    "addon_total": {
+      "type": "decimal"
+    },
+    "discount_total": {
+      "type": "decimal"
+    },
+    "point_total": {
+      "type": "decimal"
+    }
+  }
+}

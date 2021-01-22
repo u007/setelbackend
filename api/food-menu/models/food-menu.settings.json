@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "FoodMenu",
+  "info": {
+    "name": "FoodMenu",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "selling_price": {
+      "type": "decimal"
+    },
+    "retail_price": {
+      "type": "decimal"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "thumb": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "attribute.item-option"
+    },
+    "AddOns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "attribute.item-addon"
+    },
+    "bundle_food_menus": {
+      "collection": "food-menu"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "tax_included": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "point": {
+      "type": "decimal"
+    }
+  }
+}

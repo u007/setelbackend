@@ -1,0 +1,69 @@
+{
+  "collectionName": "components_attribute_order_items",
+  "info": {
+    "name": "OrderItem",
+    "icon": "box",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sku": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "decimal",
+      "required": true
+    },
+    "selling_price": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "discount_seller": {
+      "type": "decimal"
+    },
+    "discount_platform": {
+      "type": "decimal"
+    },
+    "discount_code": {
+      "type": "string"
+    },
+    "discount_total": {
+      "type": "decimal"
+    },
+    "retail_price": {
+      "type": "decimal"
+    },
+    "name": {
+      "type": "string"
+    },
+    "food_menu": {
+      "model": "food-menu"
+    },
+    "option": {
+      "type": "component",
+      "repeatable": true,
+      "component": "attribute.item-option"
+    },
+    "addon": {
+      "type": "component",
+      "repeatable": true,
+      "component": "attribute.item-addon"
+    },
+    "addon_total": {
+      "type": "decimal"
+    },
+    "tax_included": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "point_total": {
+      "type": "decimal"
+    },
+    "sales_total": {
+      "type": "decimal"
+    }
+  }
+}

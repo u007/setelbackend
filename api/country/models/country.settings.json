@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "country",
+  "info": {
+    "name": "Country"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "order": {
+      "via": "recipient_country",
+      "model": "order"
+    }
+  }
+}

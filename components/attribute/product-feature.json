@@ -1,0 +1,13 @@
+{
+  "collectionName": "product_feature",
+  "info": {
+    "name": "Product feature",
+    "icon": "info"
+  },
+  "options": {},
+  "attributes": {
+    "feature": {
+      "type": "text"
+    }
+  }
+}

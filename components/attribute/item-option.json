@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_attribute_item_options",
+  "info": {
+    "name": "ItemOption",
+    "icon": "grip-horizontal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price_adjustment": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "sku": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

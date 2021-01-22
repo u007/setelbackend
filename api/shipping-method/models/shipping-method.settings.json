@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipping_methods",
+  "info": {
+    "name": "ShippingMethod"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "delivery_type": {
+      "type": "enumeration",
+      "enum": [
+        "express",
+        "normal"
+      ]
+    },
+    "fee": {
+      "type": "decimal"
+    },
+    "tax_percent": {
+      "type": "decimal"
+    },
+    "orders": {
+      "via": "shipping_method",
+      "collection": "order"
+    }
+  }
+}

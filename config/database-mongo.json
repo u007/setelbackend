@@ -1,0 +1,15 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "uri": "mongodb://synagieroot:000000@127.0.0.1:27017/cms"
+      },
+      "options": {
+        "debug": true,
+        "ssl": false
+      }
+    }
+  }
+}

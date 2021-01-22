@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_attribute_product_attributes",
+  "info": {
+    "name": "product_attributes",
+    "icon": "boxes",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sku": {
+      "type": "string",
+      "required": true
+    },
+    "retail_price": {
+      "type": "decimal"
+    },
+    "color": {
+      "type": "string"
+    },
+    "package_length": {
+      "type": "decimal"
+    },
+    "package_weight": {
+      "type": "decimal"
+    },
+    "package_height": {
+      "type": "decimal"
+    },
+    "package_width": {
+      "type": "decimal"
+    },
+    "package_content": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "color_code": {
+      "type": "string"
+    },
+    "dimension": {
+      "type": "string"
+    },
+    "retail_price_currency": {
+      "type": "string"
+    },
+    "uk_size": {
+      "type": "string"
+    },
+    "upc": {
+      "type": "string"
+    }
+  }
+}
