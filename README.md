@@ -1,6 +1,27 @@
-# Strapi application
+# Setel assignment backend
 
-start mysqldb:
+
+Model logics for order state and payment api integration in:
+
+api/order/models/order.js
+
+## To test api (requires Setup)
+
+```
+make test
+```
+
+
+## What is not covered:
+
+* permissions and login access (ACL)
+
+
+
+## Setup
+
+to Start mysqldb:
+
 ```
 cd seteldb && docker-compose up
 
@@ -21,19 +42,11 @@ npm run develop
 ```
 
 
-Run payment api
+start payment api
 
 ```
 cd payment && npm run start
 ```
 
-To test api
 
-```
-make test
-```
-
-What is not covered:
-
-* permissions and login access (ACL)
 
